@@ -1,2 +1,2 @@
 # testeSiteGameMania
-Teste em site GameMania - local host
+Teste em site GameMania em servidor local host Angular
