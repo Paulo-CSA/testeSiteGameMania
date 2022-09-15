@@ -1,0 +1,8 @@
+package testeSenai;
+
+import org.openqa.selenium.WebDriver;
+
+public class testeSite {
+	private WebDriver driver;
+
+}

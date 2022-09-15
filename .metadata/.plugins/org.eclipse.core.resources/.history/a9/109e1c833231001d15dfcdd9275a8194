@@ -1,0 +1,6 @@
+package testeSenai;
+
+public class testeSite {
+	private WebDriver driver;
+
+}

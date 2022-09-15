@@ -1,0 +1,35 @@
+package testeSite;
+
+import java.util.concurrent.TimeUnit;
+
+import org.junit.Before;
+import org.junit.Test;
+import org.openqa.selenium.By;
+//import org.openqa.selenium.Keys;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
+
+public class testeSite {
+	
+	private WebDriver driver;
+    
+	@Before
+	public void abrirNavegador() {
+		System.setProperty("webdriver.chrome.driver", "C:\\Program Files\\chromedriver\\chromedriver.exe");
+		driver = new ChromeDriver();
+		driver.manage().window().maximize();
+	}
+	@Test
+	public void testeNavegador() {
+		driver.get("http://localhost:4200/");	
+		driver.findElement(By.xpath("/html/body/app-root/div/div/nav/a[2]")).click();
+		driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS.SECONDS);
+		driver.findElement(By.id("logar")).click();
+		driver.findElement(By.id("login")).sendKeys("teste@teste.com");
+		driver.findElement(By.id("senha")).sendKeys("1234");
+		driver.findElement(By.id("enviar")).click();	
+				
+	}
+}
+
+
